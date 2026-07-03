@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>White Noise</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      min-height: 100vh;
 
       /* Background image setup */
       background-image: url('assets/background.jpeg');
@@ -18,20 +19,216 @@
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
+
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #fff;
+      padding: 0 0 6rem 0;
     }
 
-    h1 {
+    h1.title {
       font-family: Impact, 'Arial Narrow Bold', sans-serif;
-      font-size: 10vw;
-      color: #fff;
+      font-size: 7vw;
       letter-spacing: 4px;
       text-align: center;
-      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+      margin: 8vh 0 10vh 0;
+      mix-blend-mode: difference;
+    }
+
+    .artist {
+      max-width: 640px;
+      margin: 0 auto 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .artist h2 {
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      margin: 0 0 1.5rem 0;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .track {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .track:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .track img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .track-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .track-info p {
       margin: 0;
+      font-size: 0.95rem;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .track a {
+      color: #fff;
+      font-size: 0.85rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      opacity: 0.85;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .track a:hover {
+      opacity: 1;
+    }
+
+    .drive-section {
+      max-width: 640px;
+      margin: 0 auto 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .drive-section h2 {
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      margin: 0 0 0.75rem 0;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .drive-section a {
+      color: #fff;
+      font-size: 0.95rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      opacity: 0.85;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .drive-section a:hover {
+      opacity: 1;
+    }
+
+    .support-wrap {
+      max-width: 640px;
+      margin: 0 auto 4rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .support-btn {
+      display: inline-block;
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 3px;
+      font-size: 1.3rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #fff;
+      padding: 0.75rem 2.5rem;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .support-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .contact {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .contact h2 {
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      margin: 0 0 0.75rem 0;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .contact p {
+      margin: 0.25rem 0;
+      font-size: 0.95rem;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
   </style>
 </head>
 <body>
-  <h1>WHITE NOISE</h1>
+
+  <h1 class="title">White Noise</h1>
+
+  <section class="artist">
+    <h2>Morph</h2>
+
+    <div class="track">
+      <img src="assets/covers/sleep-a-sound-sleep.jpg" alt="Sleep A Sound Sleep cover">
+      <div class="track-info">
+        <p>Sleep A Sound Sleep</p>
+        <a href="https://soundcloud.com/morph-584732952/sets/sleep-a-sound-sleep?si=ed33bdae76e54644bcc9cf1ca45bb91d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">Listen</a>
+      </div>
+    </div>
+
+    <div class="track">
+      <img src="assets/covers/dream-a-wild-dream.jpg" alt="Dream A Wild Dream cover">
+      <div class="track-info">
+        <p>Dream A Wild Dream</p>
+        <a href="https://soundcloud.com/morph-584732952/sets/dream-a-wild-dream?si=c1dd019d4a1745dab25f66425e5235c6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">Listen</a>
+      </div>
+    </div>
+
+    <div class="track">
+      <img src="assets/covers/galantamine.jpg" alt="Galantamine cover">
+      <div class="track-info">
+        <p>Galantamine</p>
+        <a href="https://soundcloud.com/morph-584732952/galantamine?si=92131491759147a2b26bf2e415562f47&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">Listen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="artist">
+    <h2>Root Iota</h2>
+
+    <div class="track">
+      <img src="assets/covers/maybe-another-lover.jpg" alt="maybe another lover cover">
+      <div class="track-info">
+        <p>maybe another lover</p>
+        <a href="https://soundcloud.com/riota00/sets/maybeanotherlover?si=ede2556fb4464152a183b8ca957ce642&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">Listen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="drive-section">
+    <h2>Drive</h2>
+    <a href="https://drive.google.com/drive/folders/1jtt_LqAT45AHeKfuQB5ZeKViaoZHd9TK?usp=drive_link" target="_blank" rel="noopener">Open Drive folder</a>
+  </section>
+
+  <div class="support-wrap">
+    <a class="support-btn" href="support.html">SUPPORT</a>
+  </div>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Instagram - <a href="https://instagram.com/whitenoise0_0" target="_blank" rel="noopener">whitenoise0_0</a></p>
+    <p>Youtube - <a href="https://www.youtube.com/@0__0whitenoise" target="_blank" rel="noopener">whitenoise0_0</a></p>
+  </section>
+
 </body>
 </html>
